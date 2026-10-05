@@ -1,0 +1,92 @@
+# Runs when the source repository's release workflow publishes a version here.
+#  1. Verifies the assets: SHA256SUMS.txt matches, and each zip has the executable, the native DLLs and the licenses.
+#     A broken release is turned back into a draft so nobody downloads it.
+#  2. Points the README's download links at the new version.
+name: Release published
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Release tag to verify (e.g. v3.0.0-preview.2)
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: release-published
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TAG: ${{ github.event.release.tag_name || inputs.tag }}
+    steps:
+      - name: Download assets
+        run: gh release download "$TAG" -R "$GITHUB_REPOSITORY" -D assets
+
+      - name: Verify checksums and contents
+        working-directory: assets
+        run: |
+          set -euo pipefail
+          for f in VTFEdit-win-x64.zip VTFEdit-win-x64-fx.zip SHA256SUMS.txt; do
+            test -f "$f" || { echo "::error::Missing asset $f"; exit 1; }
+          done
+          sha256sum -c SHA256SUMS.txt
+          for zip in VTFEdit-win-x64.zip VTFEdit-win-x64-fx.zip; do
+            list=$(unzip -Z1 "$zip")
+            for need in VTFEdit.exe VTFEdit.dll VTFEdit.Core.dll VTFLib.dll DevIL.dll VTFThumbnail.dll GPL.txt LGPL.txt; do
+              grep -qx "$need" <<< "$list" || { echo "::error::$zip has no $need"; exit 1; }
+            done
+            echo "$zip: OK ($(wc -l <<< "$list") files)"
+          done
+
+      - name: Unpublish a broken release
+        if: failure()
+        run: gh release edit "$TAG" -R "$GITHUB_REPOSITORY" --draft=true
+
+  readme:
+    needs: verify
+    runs-on: ubuntu-latest
+    env:
+      TAG: ${{ github.event.release.tag_name || inputs.tag }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Update the download links
+        run: |
+          set -euo pipefail
+          base="https://github.com/$GITHUB_REPOSITORY/releases/download/$TAG"
+          block=$(cat <<EOF
+          ## Última versão: [$TAG](https://github.com/$GITHUB_REPOSITORY/releases/tag/$TAG)
+
+          | Download | |
+          |---|---|
+          | [VTFEdit-win-x64.zip]($base/VTFEdit-win-x64.zip) | **Recomendado.** Windows 10/11 x64, sem instalar nada. |
+          | [VTFEdit-win-x64-fx.zip]($base/VTFEdit-win-x64-fx.zip) | Menor; exige o .NET 8 Desktop Runtime. |
+          | [SHA256SUMS.txt]($base/SHA256SUMS.txt) | Checksums. |
+          EOF
+          )
+          python3 - "$block" <<'PY'
+          import re, sys, textwrap
+          block = textwrap.dedent(sys.argv[1]).strip()
+          text = open("README.md", encoding="utf-8").read()
+          new = re.sub(r"(<!-- downloads:start -->\n).*?(\n<!-- downloads:end -->)",
+                       lambda m: m.group(1) + block + m.group(2), text, flags=re.S)
+          open("README.md", "w", encoding="utf-8").write(new)
+          PY
+
+      - name: Commit
+        run: |
+          if git diff --quiet; then echo "README already up to date"; exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -am "README: downloads for $TAG"
+          git push
