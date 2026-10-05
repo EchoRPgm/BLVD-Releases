@@ -4,7 +4,13 @@ Downloads do **VTFEdit 3**, editor de texturas (VTF) e materiais (VMT) para jogo
 VTFEdit Reloaded e na VTFLib. Este repositório contém apenas as versões publicadas.
 
 <!-- downloads:start -->
-Nenhuma versão publicada ainda.
+## Última versão: [v3.0.0-preview.2](https://github.com/EchoRPgm/VTFEdit-Releases/releases/tag/v3.0.0-preview.2)
+
+| Download | |
+|---|---|
+| [VTFEdit-win-x64.zip](https://github.com/EchoRPgm/VTFEdit-Releases/releases/download/v3.0.0-preview.2/VTFEdit-win-x64.zip) | **Recomendado.** Windows 10/11 x64, sem instalar nada. |
+| [VTFEdit-win-x64-fx.zip](https://github.com/EchoRPgm/VTFEdit-Releases/releases/download/v3.0.0-preview.2/VTFEdit-win-x64-fx.zip) | Menor; exige o .NET 8 Desktop Runtime. |
+| [SHA256SUMS.txt](https://github.com/EchoRPgm/VTFEdit-Releases/releases/download/v3.0.0-preview.2/SHA256SUMS.txt) | Checksums. |
 <!-- downloads:end -->
 
 Todas as versões: [Releases](https://github.com/EchoRPgm/VTFEdit-Releases/releases).
