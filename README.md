@@ -2,9 +2,8 @@
 
 # BLVD — releases
 
-Downloads do **BLVD** (antes "VTFEdit 3"), editor de texturas (VTF) e materiais (VMT) para jogos e mods da Source
-Engine, com conversor de modelos para props do Garry's Mod, baseado no VTFEdit Reloaded e na VTFLib. Este repositório
-contém apenas as versões publicadas. As versões até a 3.0.0-preview.3 ainda se chamam VTFEdit.
+Downloads do **BLVD**, editor de texturas (VTF) e materiais (VMT) para jogos e mods da Source Engine, com conversor
+de modelos para props do Garry's Mod. Este repositório contém apenas as versões publicadas.
 
 <!-- downloads:start -->
 ## Última versão: [v3.0.0-preview.3](https://github.com/EchoRPgm/BLVD-Releases/releases/tag/v3.0.0-preview.3)
@@ -44,9 +43,9 @@ reproduzir.
 
 ## Licença e código-fonte
 
-BLVD é distribuído sob a [GNU GPL versão 2](GPL.txt) e a VTFLib sob a [GNU LGPL versão 2.1](LGPL.txt).
-Créditos: Neil "Jed" Jedrzejewski e Ryan Gregg (VTFLib e VTFEdit originais), Sky-rym (VTFEdit Reloaded) e
-colaboradores.
+BLVD é distribuído sob a [GNU GPL versão 2](GPL.txt) e a BLVDLib sob a [GNU LGPL versão 2.1](LGPL.txt).
+Créditos: BLVDLib, BLVDThumbnail e BLVDCmd derivam do VTFLib, VTFEdit e VTFCmd de Neil "Jed" Jedrzejewski e
+Ryan Gregg, com contribuições de misyltoad, Sky-rym e IAmKnotMax.
 
 Conforme a seção 3(b) da GPL v2, o código-fonte correspondente a cada versão publicada aqui pode ser solicitado
 abrindo uma issue neste repositório, por no mínimo três anos a partir da publicação daquela versão, sem custo além do

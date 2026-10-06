@@ -40,7 +40,7 @@ jobs:
           sha256sum -c SHA256SUMS.txt
           for zip in BLVD-win-x64.zip BLVD-win-x64-fx.zip; do
             list=$(unzip -Z1 "$zip")
-            for need in BLVD.exe BLVD.dll VTFEdit.Core.dll VTFLib.dll DevIL.dll VTFThumbnail.dll GPL.txt LGPL.txt; do
+            for need in BLVD.exe BLVD.dll BLVD.Core.dll BLVDLib.dll DevIL.dll BLVDThumbnail.dll GPL.txt LGPL.txt; do
               grep -qx "$need" <<< "$list" || { echo "::error::$zip has no $need"; exit 1; }
             done
             echo "$zip: OK ($(wc -l <<< "$list") files)"
