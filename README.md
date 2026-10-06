@@ -1,7 +1,10 @@
-# VTFEdit — releases
+<img src="brand/logo.png" alt="BLVD" width="96" align="right">
 
-Downloads do **VTFEdit 3**, editor de texturas (VTF) e materiais (VMT) para jogos e mods da Source Engine, baseado no
-VTFEdit Reloaded e na VTFLib. Este repositório contém apenas as versões publicadas.
+# BLVD — releases
+
+Downloads do **BLVD** (antes "VTFEdit 3"), editor de texturas (VTF) e materiais (VMT) para jogos e mods da Source
+Engine, com conversor de modelos para props do Garry's Mod, baseado no VTFEdit Reloaded e na VTFLib. Este repositório
+contém apenas as versões publicadas. As versões até a 3.0.0-preview.3 ainda se chamam VTFEdit.
 
 <!-- downloads:start -->
 ## Última versão: [v3.0.0-preview.3](https://github.com/EchoRPgm/VTFEdit-Releases/releases/tag/v3.0.0-preview.3)
@@ -17,13 +20,13 @@ Todas as versões: [Releases](https://github.com/EchoRPgm/VTFEdit-Releases/relea
 
 ## Instalação
 
-1. Baixe `VTFEdit-win-x64.zip` (roda sem instalar nada) ou `VTFEdit-win-x64-fx.zip` (menor; exige o
+1. Baixe `BLVD-win-x64.zip` (roda sem instalar nada) ou `BLVD-win-x64-fx.zip` (menor; exige o
    [.NET 8 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/8.0)).
 2. Confira o download, se quiser, com o `SHA256SUMS.txt` da mesma release:
-   `Get-FileHash .\VTFEdit-win-x64.zip -Algorithm SHA256`.
-3. Extraia numa pasta e abra o `VTFEdit.exe`.
+   `Get-FileHash .\BLVD-win-x64.zip -Algorithm SHA256`.
+3. Extraia numa pasta e abra o `BLVD.exe`.
 
-O VTFEdit avisa quando há uma versão nova (Settings › Updates).
+O BLVD avisa quando há uma versão nova (Settings › Updates).
 
 ## O que ele faz
 
@@ -32,7 +35,7 @@ O VTFEdit avisa quando há uma versão nova (Settings › Updates).
 - Edições rápidas: girar, espelhar, redimensionar, inverter o verde de normal maps, regenerar mipmaps.
 - Editor de VMT com validação e formulário com prévia.
 - Converte imagens e pastas em VTF + VMT, inclusive observando uma pasta e reconvertendo ao salvar.
-- Integração com o Explorer: *Open with VTFEdit*, *Convert to VTF* e miniaturas de .vtf.
+- Integração com o Explorer: *Open with BLVD*, *Convert to VTF* e miniaturas de .vtf.
 
 ## Problemas e sugestões
 
@@ -41,7 +44,7 @@ reproduzir.
 
 ## Licença e código-fonte
 
-VTFEdit é distribuído sob a [GNU GPL versão 2](GPL.txt) e a VTFLib sob a [GNU LGPL versão 2.1](LGPL.txt).
+BLVD é distribuído sob a [GNU GPL versão 2](GPL.txt) e a VTFLib sob a [GNU LGPL versão 2.1](LGPL.txt).
 Créditos: Neil "Jed" Jedrzejewski e Ryan Gregg (VTFLib e VTFEdit originais), Sky-rym (VTFEdit Reloaded) e
 colaboradores.
 

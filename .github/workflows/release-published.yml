@@ -34,13 +34,13 @@ jobs:
         working-directory: assets
         run: |
           set -euo pipefail
-          for f in VTFEdit-win-x64.zip VTFEdit-win-x64-fx.zip SHA256SUMS.txt; do
+          for f in BLVD-win-x64.zip BLVD-win-x64-fx.zip SHA256SUMS.txt; do
             test -f "$f" || { echo "::error::Missing asset $f"; exit 1; }
           done
           sha256sum -c SHA256SUMS.txt
-          for zip in VTFEdit-win-x64.zip VTFEdit-win-x64-fx.zip; do
+          for zip in BLVD-win-x64.zip BLVD-win-x64-fx.zip; do
             list=$(unzip -Z1 "$zip")
-            for need in VTFEdit.exe VTFEdit.dll VTFEdit.Core.dll VTFLib.dll DevIL.dll VTFThumbnail.dll GPL.txt LGPL.txt; do
+            for need in BLVD.exe BLVD.dll VTFEdit.Core.dll VTFLib.dll DevIL.dll VTFThumbnail.dll GPL.txt LGPL.txt; do
               grep -qx "$need" <<< "$list" || { echo "::error::$zip has no $need"; exit 1; }
             done
             echo "$zip: OK ($(wc -l <<< "$list") files)"
@@ -69,8 +69,8 @@ jobs:
 
           | Download | |
           |---|---|
-          | [VTFEdit-win-x64.zip]($base/VTFEdit-win-x64.zip) | **Recomendado.** Windows 10/11 x64, sem instalar nada. |
-          | [VTFEdit-win-x64-fx.zip]($base/VTFEdit-win-x64-fx.zip) | Menor; exige o .NET 8 Desktop Runtime. |
+          | [BLVD-win-x64.zip]($base/BLVD-win-x64.zip) | **Recomendado.** Windows 10/11 x64, sem instalar nada. |
+          | [BLVD-win-x64-fx.zip]($base/BLVD-win-x64-fx.zip) | Menor; exige o .NET 8 Desktop Runtime. |
           | [SHA256SUMS.txt]($base/SHA256SUMS.txt) | Checksums. |
           EOF
           )
