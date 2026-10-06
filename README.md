@@ -7,16 +7,16 @@ Engine, com conversor de modelos para props do Garry's Mod, baseado no VTFEdit R
 contém apenas as versões publicadas. As versões até a 3.0.0-preview.3 ainda se chamam VTFEdit.
 
 <!-- downloads:start -->
-## Última versão: [v3.0.0-preview.3](https://github.com/EchoRPgm/VTFEdit-Releases/releases/tag/v3.0.0-preview.3)
+## Última versão: [v3.0.0-preview.3](https://github.com/EchoRPgm/BLVD-Releases/releases/tag/v3.0.0-preview.3)
 
 | Download | |
 |---|---|
-| [VTFEdit-win-x64.zip](https://github.com/EchoRPgm/VTFEdit-Releases/releases/download/v3.0.0-preview.3/VTFEdit-win-x64.zip) | **Recomendado.** Windows 10/11 x64, sem instalar nada. |
-| [VTFEdit-win-x64-fx.zip](https://github.com/EchoRPgm/VTFEdit-Releases/releases/download/v3.0.0-preview.3/VTFEdit-win-x64-fx.zip) | Menor; exige o .NET 8 Desktop Runtime. |
-| [SHA256SUMS.txt](https://github.com/EchoRPgm/VTFEdit-Releases/releases/download/v3.0.0-preview.3/SHA256SUMS.txt) | Checksums. |
+| [VTFEdit-win-x64.zip](https://github.com/EchoRPgm/BLVD-Releases/releases/download/v3.0.0-preview.3/VTFEdit-win-x64.zip) | **Recomendado.** Windows 10/11 x64, sem instalar nada. |
+| [VTFEdit-win-x64-fx.zip](https://github.com/EchoRPgm/BLVD-Releases/releases/download/v3.0.0-preview.3/VTFEdit-win-x64-fx.zip) | Menor; exige o .NET 8 Desktop Runtime. |
+| [SHA256SUMS.txt](https://github.com/EchoRPgm/BLVD-Releases/releases/download/v3.0.0-preview.3/SHA256SUMS.txt) | Checksums. |
 <!-- downloads:end -->
 
-Todas as versões: [Releases](https://github.com/EchoRPgm/VTFEdit-Releases/releases).
+Todas as versões: [Releases](https://github.com/EchoRPgm/BLVD-Releases/releases).
 
 ## Instalação
 
@@ -39,7 +39,7 @@ O BLVD avisa quando há uma versão nova (Settings › Updates).
 
 ## Problemas e sugestões
 
-Abra uma [issue](https://github.com/EchoRPgm/VTFEdit-Releases/issues) com a versão (Settings › About) e os passos para
+Abra uma [issue](https://github.com/EchoRPgm/BLVD-Releases/issues) com a versão (Settings › About) e os passos para
 reproduzir.
 
 ## Licença e código-fonte
