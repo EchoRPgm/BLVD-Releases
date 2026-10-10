@@ -6,13 +6,13 @@ Downloads do **BLVD**, editor de texturas (VTF) e materiais (VMT) para jogos e m
 de modelos para props do Garry's Mod. Este repositório contém apenas as versões publicadas.
 
 <!-- downloads:start -->
-## Última versão: [v1.1.0](https://github.com/EchoRPgm/BLVD-Releases/releases/tag/v1.1.0)
+## Última versão: [v1.2.0](https://github.com/EchoRPgm/BLVD-Releases/releases/tag/v1.2.0)
 
 | Download | |
 |---|---|
-| [BLVD-win-x64.zip](https://github.com/EchoRPgm/BLVD-Releases/releases/download/v1.1.0/BLVD-win-x64.zip) | **Recomendado.** Windows 10/11 x64, sem instalar nada. |
-| [BLVD-win-x64-fx.zip](https://github.com/EchoRPgm/BLVD-Releases/releases/download/v1.1.0/BLVD-win-x64-fx.zip) | Menor; exige o .NET 8 Desktop Runtime. |
-| [SHA256SUMS.txt](https://github.com/EchoRPgm/BLVD-Releases/releases/download/v1.1.0/SHA256SUMS.txt) | Checksums. |
+| [BLVD-win-x64.zip](https://github.com/EchoRPgm/BLVD-Releases/releases/download/v1.2.0/BLVD-win-x64.zip) | **Recomendado.** Windows 10/11 x64, sem instalar nada. |
+| [BLVD-win-x64-fx.zip](https://github.com/EchoRPgm/BLVD-Releases/releases/download/v1.2.0/BLVD-win-x64-fx.zip) | Menor; exige o .NET 8 Desktop Runtime. |
+| [SHA256SUMS.txt](https://github.com/EchoRPgm/BLVD-Releases/releases/download/v1.2.0/SHA256SUMS.txt) | Checksums. |
 <!-- downloads:end -->
 
 Todas as versões: [Releases](https://github.com/EchoRPgm/BLVD-Releases/releases).
