@@ -66,12 +66,12 @@ jobs:
           set -euo pipefail
           base="https://github.com/$GITHUB_REPOSITORY/releases/download/$TAG"
           block=$(cat <<EOF
-          ## Última versão: [$TAG](https://github.com/$GITHUB_REPOSITORY/releases/tag/$TAG)
+          ## Latest version: [$TAG](https://github.com/$GITHUB_REPOSITORY/releases/tag/$TAG)
 
           | Download | |
           |---|---|
-          | [BLVD-win-x64.zip]($base/BLVD-win-x64.zip) | **Recomendado.** Windows 10/11 x64, sem instalar nada. |
-          | [BLVD-win-x64-fx.zip]($base/BLVD-win-x64-fx.zip) | Menor; exige o .NET 8 Desktop Runtime. |
+          | [BLVD-win-x64.zip]($base/BLVD-win-x64.zip) | **Recommended.** Windows 10/11 x64, nothing to install. |
+          | [BLVD-win-x64-fx.zip]($base/BLVD-win-x64-fx.zip) | Smaller; needs the .NET 8 Desktop Runtime. |
           | [SHA256SUMS.txt]($base/SHA256SUMS.txt) | Checksums. |
           EOF
           )

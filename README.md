@@ -2,51 +2,60 @@
 
 # BLVD — releases
 
-Downloads do **BLVD**, editor de texturas (VTF) e materiais (VMT) para jogos e mods da Source Engine, com conversor
-de modelos para props do Garry's Mod. Este repositório contém apenas as versões publicadas.
+Downloads of **BLVD**, a free Windows tool for Source engine games and mods: it edits textures (VTF) and materials
+(VMT), converts images in batches, turns 3D models, images and text into Garry's Mod props, and checks what a map
+needs. This repository only holds the published versions. Guide and website: https://donosonion.github.io/blvd/
 
 <!-- downloads:start -->
-## Última versão: [v1.3.1](https://github.com/EchoRPgm/BLVD-Releases/releases/tag/v1.3.1)
+## Latest version: [v1.3.1](https://github.com/EchoRPgm/BLVD-Releases/releases/tag/v1.3.1)
 
 | Download | |
 |---|---|
-| [BLVD-win-x64.zip](https://github.com/EchoRPgm/BLVD-Releases/releases/download/v1.3.1/BLVD-win-x64.zip) | **Recomendado.** Windows 10/11 x64, sem instalar nada. |
-| [BLVD-win-x64-fx.zip](https://github.com/EchoRPgm/BLVD-Releases/releases/download/v1.3.1/BLVD-win-x64-fx.zip) | Menor; exige o .NET 8 Desktop Runtime. |
+| [BLVD-win-x64.zip](https://github.com/EchoRPgm/BLVD-Releases/releases/download/v1.3.1/BLVD-win-x64.zip) | **Recommended.** Windows 10/11 x64, nothing to install. |
+| [BLVD-win-x64-fx.zip](https://github.com/EchoRPgm/BLVD-Releases/releases/download/v1.3.1/BLVD-win-x64-fx.zip) | Smaller; needs the .NET 8 Desktop Runtime. |
 | [SHA256SUMS.txt](https://github.com/EchoRPgm/BLVD-Releases/releases/download/v1.3.1/SHA256SUMS.txt) | Checksums. |
 <!-- downloads:end -->
 
-Todas as versões: [Releases](https://github.com/EchoRPgm/BLVD-Releases/releases).
+All versions: [Releases](https://github.com/EchoRPgm/BLVD-Releases/releases).
 
-## Instalação
+## Installing
 
-1. Baixe `BLVD-win-x64.zip` (roda sem instalar nada) ou `BLVD-win-x64-fx.zip` (menor; exige o
+1. Download `BLVD-win-x64.zip` (runs without installing anything) or `BLVD-win-x64-fx.zip` (smaller; needs the
    [.NET 8 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/8.0)).
-2. Confira o download, se quiser, com o `SHA256SUMS.txt` da mesma release:
+2. If you like, check the download against the release's `SHA256SUMS.txt`:
    `Get-FileHash .\BLVD-win-x64.zip -Algorithm SHA256`.
-3. Extraia numa pasta e abra o `BLVD.exe`.
+3. Unzip it into a folder and open `BLVD.exe`. The package has 10 files: `BLVD.exe`, five native libraries, the
+   licences, a readme and `Guide.html`.
 
-O BLVD avisa quando há uma versão nova (Settings › Updates).
+BLVD tells you when a new version is out, and **Update now** installs it (Settings › Updates). The interface is in
+English, with Brazilian Portuguese available in Settings › Language.
 
-## O que ele faz
+## What it does
 
-- Visualiza VTF (canais, transparência, frames, faces, mipmaps, animação, HDR) em abas; edita propriedades, flags e
-  recursos; exporta e cola imagens com alpha.
-- Edições rápidas: girar, espelhar, redimensionar, inverter o verde de normal maps, regenerar mipmaps.
-- Editor de VMT com validação e formulário com prévia.
-- Converte imagens e pastas em VTF + VMT, inclusive observando uma pasta e reconvertendo ao salvar.
-- Integração com o Explorer: *Open with BLVD*, *Convert to VTF* e miniaturas de .vtf.
+- **Viewer:** VTF textures in tabs — channels, transparency, frames, faces, mipmaps, animation, HDR; properties, flags
+  and resources; export and paste with alpha; rotate, flip, resize, invert normal-map green, regenerate mipmaps,
+  generate a normal map from the colours.
+- **Material:** a VMT editor with validation, a form with a live preview, and a 3D preview of the material.
+- **Convert:** images and folders (PNG, JPG, TGA, WebP, SVG…) to VTF + VMT, with linked normal/specular maps,
+  animated textures, generated normal maps, a watch mode and a history.
+- **Model:** FBX, glTF, OBJ, DAE and more → Garry's Mod props, without Blender: size and orientation, collision fitted
+  to the shape, LODs, skins, static or physics props. **From image / From text** turn logos and words into 3D signs,
+  optionally glowing.
+- **Props:** a library of the props you compiled.
+- **Map:** what a `.bsp`/`.vmf` uses, what is missing and what must ship with it; copy the custom content to an addon
+  or pack it into the map.
+- **Explorer integration:** *Open with BLVD*, *Convert to VTF* and `.vtf` thumbnails.
 
-## Problemas e sugestões
+## Problems and suggestions
 
-Abra uma [issue](https://github.com/EchoRPgm/BLVD-Releases/issues) com a versão (Settings › About) e os passos para
-reproduzir.
+Open an [issue](https://github.com/EchoRPgm/BLVD-Releases/issues) with the version (Settings › About) and the steps to
+reproduce it.
 
-## Licença e código-fonte
+## Licence and source code
 
-BLVD é distribuído sob a [GNU GPL versão 2](GPL.txt) e a BLVDLib sob a [GNU LGPL versão 2.1](LGPL.txt).
-Créditos: BLVDLib, BLVDThumbnail e BLVDCmd derivam do VTFLib, VTFEdit e VTFCmd de Neil "Jed" Jedrzejewski e
-Ryan Gregg, com contribuições de misyltoad, Sky-rym e IAmKnotMax.
+BLVD is distributed under the [GNU GPL version 2](GPL.txt) and BLVDLib under the [GNU LGPL version 2.1](LGPL.txt).
+Credits: BLVDLib, BLVDThumbnail and BLVDCmd derive from VTFLib, VTFEdit and VTFCmd by Neil "Jed" Jedrzejewski and
+Ryan Gregg, with contributions from misyltoad, Sky-rym and IAmKnotMax.
 
-Conforme a seção 3(b) da GPL v2, o código-fonte correspondente a cada versão publicada aqui pode ser solicitado
-abrindo uma issue neste repositório, por no mínimo três anos a partir da publicação daquela versão, sem custo além do
-de envio.
+Under section 3(b) of the GPL v2, the source code of every version published here can be requested by opening an
+issue in this repository, for at least three years from that version's publication, at no cost beyond shipping.
