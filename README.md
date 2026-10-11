@@ -7,13 +7,13 @@ Downloads of **BLVD**, a free Windows tool for Source engine games and mods: it 
 needs. This repository only holds the published versions. Guide and website: https://donosonion.github.io/blvd/
 
 <!-- downloads:start -->
-## Latest version: [v1.3.1](https://github.com/EchoRPgm/BLVD-Releases/releases/tag/v1.3.1)
+## Latest version: [v1.3.2](https://github.com/EchoRPgm/BLVD-Releases/releases/tag/v1.3.2)
 
 | Download | |
 |---|---|
-| [BLVD-win-x64.zip](https://github.com/EchoRPgm/BLVD-Releases/releases/download/v1.3.1/BLVD-win-x64.zip) | **Recommended.** Windows 10/11 x64, nothing to install. |
-| [BLVD-win-x64-fx.zip](https://github.com/EchoRPgm/BLVD-Releases/releases/download/v1.3.1/BLVD-win-x64-fx.zip) | Smaller; needs the .NET 8 Desktop Runtime. |
-| [SHA256SUMS.txt](https://github.com/EchoRPgm/BLVD-Releases/releases/download/v1.3.1/SHA256SUMS.txt) | Checksums. |
+| [BLVD-win-x64.zip](https://github.com/EchoRPgm/BLVD-Releases/releases/download/v1.3.2/BLVD-win-x64.zip) | **Recommended.** Windows 10/11 x64, nothing to install. |
+| [BLVD-win-x64-fx.zip](https://github.com/EchoRPgm/BLVD-Releases/releases/download/v1.3.2/BLVD-win-x64-fx.zip) | Smaller; needs the .NET 8 Desktop Runtime. |
+| [SHA256SUMS.txt](https://github.com/EchoRPgm/BLVD-Releases/releases/download/v1.3.2/SHA256SUMS.txt) | Checksums. |
 <!-- downloads:end -->
 
 All versions: [Releases](https://github.com/EchoRPgm/BLVD-Releases/releases).
