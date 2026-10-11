@@ -40,7 +40,8 @@ jobs:
           sha256sum -c SHA256SUMS.txt
           for zip in BLVD-win-x64.zip BLVD-win-x64-fx.zip; do
             list=$(unzip -Z1 "$zip")
-            for need in BLVD.exe BLVD.dll BLVD.Core.dll BLVDLib.dll DevIL.dll BLVDThumbnail.dll GPL.txt LGPL.txt; do
+            # Single-file packages (1.4+): BLVD.exe carries .NET and the managed code; the native libraries sit beside it.
+            for need in BLVD.exe BLVDLib.dll DevIL.dll BLVDThumbnail.dll Assimp64.dll meshoptimizer.dll GPL.txt LGPL.txt Guide.html; do
               grep -qx "$need" <<< "$list" || { echo "::error::$zip has no $need"; exit 1; }
             done
             echo "$zip: OK ($(wc -l <<< "$list") files)"
