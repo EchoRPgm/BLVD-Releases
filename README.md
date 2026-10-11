@@ -2,6 +2,10 @@
 
 # BLVD — releases
 
+> [!WARNING]
+> BLVD is still in testing: expect bugs, and many fixes are on the way. Please report problems in the
+> [issues](https://github.com/EchoRPgm/BLVD-Releases/issues) — it helps a lot.
+
 Downloads of **BLVD**, a free Windows tool for Source engine games and mods: it edits textures (VTF) and materials
 (VMT), converts images in batches, turns 3D models, images and text into Garry's Mod props, and checks what a map
 needs. This repository only holds the published versions. Guide and website: https://donosonion.github.io/blvd/
